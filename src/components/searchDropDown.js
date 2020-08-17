@@ -9,6 +9,8 @@ const SearchDropDown = (props) => {
     selectSearchHandler,
     addSearchValueHandler,
     userData,
+    moreHandler,
+    hide,
   } = props;
 
   return (
@@ -57,6 +59,13 @@ const SearchDropDown = (props) => {
                         ""
                       )}
                     </div>
+                  )}
+                  {hide ? (
+                    <p onClick={moreHandler} className="more pull-right">
+                      More...
+                    </p>
+                  ) : (
+                    ""
                   )}
                 </ul>
               </div>

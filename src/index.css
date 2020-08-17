@@ -56,3 +56,11 @@ a.dropdown-item {
   padding: 10px;
   border-bottom: 1px solid #e2e2e2;
 }
+
+.more {
+  color: #2c67ec;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}

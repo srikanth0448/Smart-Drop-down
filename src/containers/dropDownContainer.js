@@ -9,6 +9,7 @@ class DropDownContainer extends Component {
     searchValue: "",
     selectvalue: "",
     userData: [],
+    hide: true,
   };
 
   selectSearchHandler = (value) => {
@@ -17,7 +18,6 @@ class DropDownContainer extends Component {
 
   addSearchValueHandler = () => {
     let addAcountriesList = data;
-    console.log(this.state.searchValue);
     addAcountriesList.push({
       name: this.state.searchValue,
       code: this.state.searchValue,
@@ -27,7 +27,6 @@ class DropDownContainer extends Component {
       selectvalue: this.state.searchValue,
       searchValue: "",
     });
-    console.log("====", addAcountriesList);
   };
 
   searchValueHandler = (e) => {
@@ -56,17 +55,27 @@ class DropDownContainer extends Component {
     }
   };
 
+  moreHandler = () => {
+    this.setState({ countriesList: data, hide: false });
+  };
+
   componentDidMount() {
-    // const countriesList = [];
-    // for (let i = 0; i < 5; i++) {
-    //   countriesList.push(data[i]);
-    // }
-    // this.setState({ countriesList });
+    const countriesList = [];
+    for (let i = 0; i < 5; i++) {
+      countriesList.push(data[i]);
+    }
+    this.setState({ countriesList });
     this.addUsers();
   }
 
   render() {
-    const { countriesList, searchValue, selectvalue, userData } = this.state;
+    const {
+      countriesList,
+      searchValue,
+      selectvalue,
+      userData,
+      hide,
+    } = this.state;
 
     return (
       <div>
@@ -74,9 +83,11 @@ class DropDownContainer extends Component {
           countries={countriesList}
           searchValue={searchValue}
           selectvalue={selectvalue}
+          hide={hide}
           searchValueHandler={this.searchValueHandler}
           selectSearchHandler={this.selectSearchHandler}
           addSearchValueHandler={this.addSearchValueHandler}
+          moreHandler={this.moreHandler}
           userData={userData}
         />
       </div>
