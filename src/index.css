@@ -23,7 +23,15 @@ body {
   position: relative;
   text-align: left;
   border-radius: 0px;
+  font-size:14px;
 }
+
+.dropdown-toggle::after { 
+  position: absolute;
+  right: 8px;
+  top: 17px;
+}
+
 
 a.dropdown-item {
   padding-left: 5px; 
