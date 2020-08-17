@@ -1,0 +1,15 @@
+[ 
+{"name": "Afghanistan", "code": "AF"},   
+{"name": "Australia", "code": "AU"},  
+{"name": "Bangladesh", "code": "BD"},  
+{"name": "Hong Kong", "code": "HK"}, 
+{"name": "India", "code": "IN"},  
+{"name": "Myanmar", "code": "MM"}, 
+{"name": "Namibia", "code": "NA"},   
+{"name": "Oman", "code": "OM"}, 
+{"name": "Pakistan", "code": "PK"},  
+{"name": "South Africa", "code": "ZA"},  
+{"name": "United Arab Emirates", "code": "AE"},  
+{"name": "United States", "code": "US"},  
+{"name": "Zimbabwe", "code": "ZW"} 
+]

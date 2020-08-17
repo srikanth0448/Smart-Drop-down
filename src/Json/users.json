@@ -1,0 +1,10 @@
+[
+    {
+        "userName":"user1",
+        "roles": ["add", "view"]
+    },
+    {
+        "userName":"user2",
+        "roles": ["view"]
+    }
+]
