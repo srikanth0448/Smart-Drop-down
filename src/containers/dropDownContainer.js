@@ -10,6 +10,7 @@ class DropDownContainer extends Component {
     selectvalue: "",
     userData: [],
     hide: true,
+    contriesLength: "",
   };
 
   selectSearchHandler = (value) => {
@@ -60,12 +61,17 @@ class DropDownContainer extends Component {
     this.setState({ countriesList: data, hide: false });
   };
 
-  componentDidMount() {
+  loadContries = () => {
     const countriesList = [];
+    const contriesLength = data.length - 5;
     for (let i = 0; i < 5; i++) {
       countriesList.push(data[i]);
     }
-    this.setState({ countriesList });
+    this.setState({ countriesList, contriesLength });
+  };
+
+  componentDidMount() {
+    this.loadContries();
     this.addUsers();
   }
 
@@ -76,6 +82,7 @@ class DropDownContainer extends Component {
       selectvalue,
       userData,
       hide,
+      contriesLength,
     } = this.state;
 
     return (
@@ -85,6 +92,7 @@ class DropDownContainer extends Component {
           searchValue={searchValue}
           selectvalue={selectvalue}
           hide={hide}
+          contriesLength={contriesLength}
           searchValueHandler={this.searchValueHandler}
           selectSearchHandler={this.selectSearchHandler}
           addSearchValueHandler={this.addSearchValueHandler}

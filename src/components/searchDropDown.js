@@ -11,13 +11,14 @@ const SearchDropDown = (props) => {
     userData,
     moreHandler,
     hide,
+    contriesLength,
   } = props;
 
   return (
     <div>
       <div className="container">
         <div className="row justify-content-md-center mt-4">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <div className="">
               <button className="btn btn-secondary dropdown-toggle">
                 {selectvalue ? selectvalue : "Select Location"}
@@ -62,7 +63,7 @@ const SearchDropDown = (props) => {
                   )}
                   {hide ? (
                     <p onClick={moreHandler} className="more pull-right">
-                      More...
+                      {contriesLength} More...
                     </p>
                   ) : (
                     ""
