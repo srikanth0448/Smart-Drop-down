@@ -44,6 +44,7 @@ class DropDownContainer extends Component {
     this.setState({
       searchValue: e.target.value,
       countriesList: filteredCountires,
+      hide: false,
     });
   };
 
